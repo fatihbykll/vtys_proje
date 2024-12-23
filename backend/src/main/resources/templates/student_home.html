@@ -1,11 +1,70 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <title>Student Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Ana Sayfası</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+        }
+
+        nav h1 {
+            font-size: 1.5rem;
+        }
+
+        nav button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        nav button:hover {
+            background-color: #45a049;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px); 
+        }
+
+        .content form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome, Student!</h1>
-    <a href="/student/{userId}/courses" th:href="@{/student/{userId}/courses(userId=${userId})}">View My Courses</a>
-    <a href="/logout">Logout</a>
+    <nav>
+        <h1>Öğrenci Ana Sayfası</h1>
+        <form action="/student/goToCourseSelection" method="post">
+            <button type="submit">Kurs Seçimi</button>
+        </form>
+    </nav>
+
+    <div class="content">
+    </div>
 </body>
 </html>

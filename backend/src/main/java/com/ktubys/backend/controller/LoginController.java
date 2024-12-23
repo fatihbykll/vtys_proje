@@ -15,7 +15,7 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/login")
+    @GetMapping("/*")
     public String loginPage() {
         return "login";
     }
@@ -27,13 +27,8 @@ public class LoginController {
             model.addAttribute("error", "Invalid username or password");
             return "login";
         }
-
-        if ("STUDENT".equals(user.getRole())) {
-            return "redirect:/student/home";
-        } else if ("INSTRUCTOR".equals(user.getRole())) {
-            return "redirect:/instructor/home";
-        }
-
+        
         return "login";
     }
+    
 }

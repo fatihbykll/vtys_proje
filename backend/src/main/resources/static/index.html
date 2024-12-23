@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Secim Ekrani</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kurs Secim Ekrani</h1>
+        <form id="courseSelectionForm">
+            <label for="studentName">Ogrenci Adi:</label>
+            <input type="text" id="studentName" name="studentName" required>
+
+            <label for="courses">Kurs Seçimi:</label>
+            <select id="courses" name="courses" multiple required>
+            </select>
+
+            <button type="submit">Seçimi Kaydet</button>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

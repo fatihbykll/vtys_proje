@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Course List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Course Name</th>
+                <th>Credits</th>
+            </tr>
+        </thead>
+        <tbody id="courseTable">
+        </tbody>
+    </table>
+    <script>
+        fetch('http://localhost:8080/course/selection')
+            .then(response => response.json())  
+            .then(data => {
+                const tableBody = document.getElementById('courses');
+                data.forEach(course => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${course.id}</td>
+                        <td>${course.courseName}</td>
+                        <td>${course.credits}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching the data:', error);
+            });
+    </script>
+
+</body>
+</html>

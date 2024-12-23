@@ -1,4 +1,3 @@
-/* Genel Ayarlar */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,7 +10,6 @@ body {
     color: white;
 }
 
-/* Ana Konteyner */
 .container {
     background-color: #053B82;
     padding: 20px 40px;
@@ -21,7 +19,6 @@ body {
     text-align: center;
 }
 
-/* BaÅŸlÄ±k AlanÄ± */
 .header h1 {
     font-size: 36px;
     margin: 0;
@@ -33,7 +30,6 @@ body {
     color: #d0d0d0;
 }
 
-/* Sekmeler */
 .tabs button {
     background-color: transparent;
     border: none;
@@ -49,7 +45,6 @@ body {
     border-color: #fff;
 }
 
-/* Form AlanÄ± */
 .login-form input {
     display: block;
     width: 80%;
@@ -77,7 +72,6 @@ body {
     text-decoration: underline;
 }
 
-/* DÃ¼ÄŸmeler */
 .login-form button {
     width: 90%;
     margin: 10px auto;

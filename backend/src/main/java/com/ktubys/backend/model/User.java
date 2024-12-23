@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -21,12 +23,18 @@ public class User {
 
     private String username;
     private String password;
-    private String role; 
+    private String fullName;
 
-     @ManyToMany
+    @Enumerated(EnumType.STRING)
+    private Role role; 
+
+    
+
+    
+    @ManyToMany
     @JoinTable(
-        name = "user_courses",
-        joinColumns = @JoinColumn(name = "user_id"),
+        name = "student_courses",
+        joinColumns = @JoinColumn(name = "student_id"),
         inverseJoinColumns = @JoinColumn(name = "course_id")
     )
     private Set<Course> courses = new HashSet<>();
@@ -56,19 +64,32 @@ public class User {
         this.password = password;
     }
 
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
-
     public Set<Course> getCourses() {
         return courses;
     }
 
     public void setCourses(Set<Course> courses) {
         this.courses = courses;
+    } 
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public enum Role {
+        STUDENT,
+        INSTRUCTOR
     }
 }

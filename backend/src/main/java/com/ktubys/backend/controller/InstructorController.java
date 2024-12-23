@@ -10,6 +10,6 @@ public class InstructorController {
 
     @GetMapping("/home")
     public String instructorHome() {
-        return "instructor_home"; // instructor_home.html dosyasını döner
+        return "instructor_home"; 
     }
 }

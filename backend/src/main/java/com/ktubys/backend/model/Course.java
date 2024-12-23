@@ -17,6 +17,8 @@ public class Course {
     private Long id;
 
     private String name;
+    
+    private Long Credits;
 
     @ManyToMany(mappedBy = "courses")
     private Set<User> students = new HashSet<>();
@@ -44,4 +46,13 @@ public class Course {
     public void setStudents(Set<User> students) {
         this.students = students;
     }
+
+    public Long getCredits() {
+        return Credits;
+    }
+
+    public void setCredits(Long credits) {
+        Credits = credits;
+    }
+    
 }
