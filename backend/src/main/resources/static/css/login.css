@@ -1,0 +1,102 @@
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #053B82; 
+    color: white;
+}
+
+/* Ana Konteyner */
+.container {
+    background-color: #053B82;
+    padding: 20px 40px;
+    border-radius: 40px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* BaÅŸlÄ±k AlanÄ± */
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.header p {
+    font-size: 14px;
+    margin: 10px 0 20px;
+    color: #d0d0d0;
+}
+
+/* Sekmeler */
+.tabs button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+}
+
+.tabs button.active {
+    border-color: #fff;
+}
+
+/* Form AlanÄ± */
+.login-form input {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    border: none;
+    border-radius: 100px;
+    font-size: 16px;
+}
+
+.login-form input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.login-form a {
+    font-size: 14px;
+    color: #d0d0d0;
+    text-decoration: none;
+    margin: 5px 0;
+    display: block;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+/* DÃ¼ÄŸmeler */
+.login-form button {
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button[type="submit"] {
+    background-color: #fff;
+    color: #053B82;
+    font-weight: bold
+}
+
+.login-form button[type="submit"]:hover {
+    background-color: #000000;
+}
+
+

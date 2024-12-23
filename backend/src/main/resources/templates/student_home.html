@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student Home</title>
+</head>
+<body>
+    <h1>Welcome, Student!</h1>
+    <a href="/student/{userId}/courses" th:href="@{/student/{userId}/courses(userId=${userId})}">View My Courses</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>
